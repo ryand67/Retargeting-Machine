@@ -4,6 +4,13 @@ import './App.css';
 import styled from 'styled-components';
 import { HexColorPicker, HexColorInput } from 'react-colorful';
 
+//Components
+import Leaderboard from './components/Leaderboard';
+import Mobile from './components/Mobile';
+import Monster from './components/Monster';
+import Skyscraper from './components/Skyskraper';
+import Tile from './components/Tile';
+
 function App() {
 
   const [mainText, setMainText] = useState<string>('');
@@ -11,6 +18,24 @@ function App() {
   const [ctaText, setCtaText] = useState<string>('');
   const [cardType, setCardType] = useState<string>('Leaderboard');
   const [ctaColor, setCtaColor] = useState<string>('');
+
+  const cardRender = (cardType: string): JSX.Element => {
+    console.log(cardType);
+    switch(cardType) {
+      case 'Leaderboard':
+        return <Leaderboard />
+      case 'Mobile':
+        return <Mobile />
+      case 'Monster':
+        return <Monster />
+      case 'Skyscraper':
+        return <Skyscraper />
+      case 'Tile':
+        return <Tile />
+      default:
+        return <Leaderboard />
+    }
+  }
 
   return (
     <div className="App">
@@ -26,7 +51,7 @@ function App() {
           <option value="Leaderboard">Leaderboard (728w x 90h)</option>
           <option value="Mobile">Mobile(320w x 50h)</option>
           <option value="Monster">Monster(300w x 600h)</option>
-          <option value="Skyskraper">Skyskraper(160w x 600h)</option>
+          <option value="Skyscraper">Skyskraper(160w x 600h)</option>
           <option value="Tile">Tile(300w x 250h)</option>
         </select>
         <ColorDiv>
@@ -38,14 +63,18 @@ function App() {
           </CTAColorDiv>
         </ColorDiv>
       </InputsForm>
+      <CardDiv>
+        {cardRender(cardType)}
+      </CardDiv>
     </div>
   );
 }
 
 const InputsForm = styled.form`
-  width: 50%;
+  width: 30%;
   text-align: left;
-  margin: 2rem auto;
+  margin-right: 5rem;
+  /* margin: 2rem auto; */
   display: flex;
   flex-direction: column;
 
@@ -85,6 +114,13 @@ const ColorDiv = styled.div`
 const CTAColorDiv = styled.div`
   display: flex;
   flex-direction: column;
+`;
+
+const CardDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
 `;
 
 export default App;

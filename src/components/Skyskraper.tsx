@@ -11,6 +11,7 @@ function Skyskraper() {
 const SkyscraperRetarget = styled.div`
     width: 160px;
     height: 600px;
+    border: 2px solid black;
 `;
 
 export default Skyskraper

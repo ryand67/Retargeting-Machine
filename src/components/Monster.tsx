@@ -11,6 +11,7 @@ function Monster() {
 const MonsterRetarget = styled.div`
     width: 300px;
     height: 600px;
+    border: 2px solid black;
 `;
 
 export default Monster

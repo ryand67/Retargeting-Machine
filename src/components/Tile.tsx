@@ -11,6 +11,7 @@ function Tile() {
 const TileRetarget = styled.div`
     width: 300px;
     height: 250px;
+    border: 2px solid black;
 `;
 
 export default Tile

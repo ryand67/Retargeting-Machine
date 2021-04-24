@@ -3,7 +3,7 @@ import styled from 'styled-components';
 function Leaderboard() {
     return (
         <LeaderboardRetarget>
-            
+            asdf
         </LeaderboardRetarget>
     )
 }
@@ -11,6 +11,7 @@ function Leaderboard() {
 const LeaderboardRetarget = styled.div`
     width: 728px;
     height: 90px;
+    border: 2px solid black;
 `;
 
 export default Leaderboard

@@ -11,6 +11,7 @@ function Mobile() {
 const MobileRetarget = styled.div`
     width: 320px;
     height: 50px;
+    border: 2px solid black;
 `;
 
 export default Mobile
