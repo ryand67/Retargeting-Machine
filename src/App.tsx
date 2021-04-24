@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 
 import styled from 'styled-components';
-import { HexColorPicker } from 'react-colorful';
+import { HexColorPicker, HexColorInput } from 'react-colorful';
 
 function App() {
 
@@ -10,7 +10,7 @@ function App() {
   const [secondaryText, setSecondaryText] = useState<string>('');
   const [ctaText, setCtaText] = useState<string>('');
   const [cardType, setCardType] = useState<string>('Leaderboard');
-  const [color, setColor] = useState<string>('');
+  const [ctaColor, setCtaColor] = useState<string>('');
 
   return (
     <div className="App">
@@ -23,14 +23,20 @@ function App() {
         <CTAInput placeholder="CTA text..." onChange={e => setCtaText(e.target.value)} />
         <label htmlFor="">Type:</label>
         <select name="" id="" onChange={e => setCardType(e.target.value)}>
-          <option value="Leaderboard">Leaderboard</option>
-          <option value="Mobile">Mobile</option>
-          <option value="Monster">Monster</option>
-          <option value="Skyskraper">Skyskraper</option>
-          <option value="Tile">Tile</option>
+          <option value="Leaderboard">Leaderboard (728w x 90h)</option>
+          <option value="Mobile">Mobile(320w x 50h)</option>
+          <option value="Monster">Monster(300w x 600h)</option>
+          <option value="Skyskraper">Skyskraper(160w x 600h)</option>
+          <option value="Tile">Tile(300w x 250h)</option>
         </select>
-        <label htmlFor="">Color:</label>
-        <HexColorPicker onChange={setColor} className="color-picker" />
+        <ColorDiv>
+          <CTAColorDiv>
+            <label htmlFor="">CTA Color:</label>
+            <HexColorPicker color={ctaColor} onChange={setCtaColor} className="color-picker" />
+            <label htmlFor="">CTA Color:</label>
+            <HexColorInput color={`#${ctaColor}`} onChange={setCtaColor} style={{ width: '10rem' }} />
+          </CTAColorDiv>
+        </ColorDiv>
       </InputsForm>
     </div>
   );
@@ -70,6 +76,15 @@ const CTALabel = styled.label`
 
 const CTAInput = styled.input`
 
+`;
+
+const ColorDiv = styled.div`
+
+`;
+
+const CTAColorDiv = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 export default App;
