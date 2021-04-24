@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-function Leaderboard() {
+import { CardProps } from '../util/Interfaces';
+
+function Leaderboard({ mainText, secondaryText, ctaText, ctaColor }: CardProps) {
     return (
         <LeaderboardRetarget>
             asdf

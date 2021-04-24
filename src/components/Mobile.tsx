@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-function Mobile() {
+import { CardProps } from '../util/Interfaces';
+
+function Mobile({ mainText, secondaryText, ctaText, ctaColor }: CardProps) {
     return (
         <MobileRetarget>
             

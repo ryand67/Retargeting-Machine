@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-function Skyskraper() {
+import { CardProps } from '../util/Interfaces';
+
+function Skyskraper({ mainText, secondaryText, ctaText, ctaColor }: CardProps) {
     return (
         <SkyscraperRetarget>
             

@@ -1,7 +1,6 @@
-export interface Props {
+export interface CardProps {
     mainText: string;
     secondaryText: string;
     ctaText: string;
-    cardType: string;
-    color: string;
+    ctaColor: string;
 }

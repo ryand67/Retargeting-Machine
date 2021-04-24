@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-function Tile() {
+import { CardProps } from '../util/Interfaces';
+
+function Tile({ mainText, secondaryText, ctaText, ctaColor }: CardProps) {
     return (
         <TileRetarget>
             

@@ -23,17 +23,17 @@ function App() {
     console.log(cardType);
     switch(cardType) {
       case 'Leaderboard':
-        return <Leaderboard />
+        return <Leaderboard mainText={mainText} secondaryText={secondaryText} ctaText={ctaText} ctaColor={ctaColor} />
       case 'Mobile':
-        return <Mobile />
+        return <Mobile mainText={mainText} secondaryText={secondaryText} ctaText={ctaText} ctaColor={ctaColor} />
       case 'Monster':
-        return <Monster />
+        return <Monster mainText={mainText} secondaryText={secondaryText} ctaText={ctaText} ctaColor={ctaColor} />
       case 'Skyscraper':
-        return <Skyscraper />
+        return <Skyscraper mainText={mainText} secondaryText={secondaryText} ctaText={ctaText} ctaColor={ctaColor} />
       case 'Tile':
-        return <Tile />
+        return <Tile mainText={mainText} secondaryText={secondaryText} ctaText={ctaText} ctaColor={ctaColor} />
       default:
-        return <Leaderboard />
+        return <Leaderboard mainText={mainText} secondaryText={secondaryText} ctaText={ctaText} ctaColor={ctaColor} />
     }
   }
 
