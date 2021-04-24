@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { JsxEmit } from 'typescript';
 
 import { CardProps } from '../util/Interfaces';
 
-function Leaderboard({ mainText, secondaryText, ctaText, ctaColor }: CardProps) {
+function Leaderboard({ mainText, secondaryText, ctaText, ctaColor }: CardProps): JSX.Element {
     return (
         <LeaderboardRetarget>
             asdf

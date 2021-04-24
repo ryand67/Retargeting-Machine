@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { CardProps } from '../util/Interfaces';
 
-function Skyskraper({ mainText, secondaryText, ctaText, ctaColor }: CardProps) {
+function Skyskraper({ mainText, secondaryText, ctaText, ctaColor }: CardProps): JSX.Element {
     return (
         <SkyscraperRetarget>
             
