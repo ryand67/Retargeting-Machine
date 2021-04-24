@@ -2,11 +2,16 @@ import styled from 'styled-components';
 
 function Monster() {
     return (
-        <div>
+        <MonsterRetarget>
             
-        </div>
+        </MonsterRetarget>
     )
 }
+
+const MonsterRetarget = styled.div`
+    width: 300px;
+    height: 600px;
+`;
 
 export default Monster
 
