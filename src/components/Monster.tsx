@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-function Monster() {
+import { CardProps } from '../util/Interfaces';
+
+function Monster({ mainText, secondaryText, ctaText, ctaColor }: CardProps): JSX.Element {
     return (
         <MonsterRetarget>
             

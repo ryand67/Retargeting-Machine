@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { JsxEmit } from 'typescript';
 
 import { CardProps } from '../util/Interfaces';
 
