@@ -1,26 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 import styled from 'styled-components';
 
 function App() {
+
+  const [mainText, setMainText] = useState<string>('');
+  const [secondaryText, setSecondaryText] = useState<string>('');
+  const [ctaText, setCtaText] = useState<string>('');
+  const [cardType, setCardType] = useState<string>('Leaderboard');
+
   return (
     <div className="App">
       <InputsForm>
         <MainTextLabel>Main Text:</MainTextLabel>
-        <MainTextInput />
+        <MainTextInput placeholder="Main text..." onChange={e => setMainText(e.target.value)} />
         <SecondTextLabel>Secondary Text:</SecondTextLabel>
-        <SecondTextInput />
+        <SecondTextInput placeholder="Secondary text..." onChange={e => setSecondaryText(e.target.value)} />
         <CTALabel>CTA Text:</CTALabel>
-        <CTAInput />
+        <CTAInput placeholder="CTA text..." onChange={e => setCtaText(e.target.value)} />
         <label htmlFor="">Type:</label>
-        <select name="" id="">
+        <select name="" id="" onChange={e => setCardType(e.target.value)}>
           <option value="Leaderboard">Leaderboard</option>
           <option value="Mobile">Mobile</option>
           <option value="Monster">Monster</option>
           <option value="Skyskraper">Skyskraper</option>
           <option value="Tile">Tile</option>
         </select>
+        
       </InputsForm>
     </div>
   );
