@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 
 import styled from 'styled-components';
+import { HexColorPicker } from 'react-colorful';
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
   const [secondaryText, setSecondaryText] = useState<string>('');
   const [ctaText, setCtaText] = useState<string>('');
   const [cardType, setCardType] = useState<string>('Leaderboard');
+  const [color, setColor] = useState<string>('');
 
   return (
     <div className="App">
@@ -27,7 +29,8 @@ function App() {
           <option value="Skyskraper">Skyskraper</option>
           <option value="Tile">Tile</option>
         </select>
-        
+        <label htmlFor="">Color:</label>
+        <HexColorPicker onChange={setColor} className="color-picker" />
       </InputsForm>
     </div>
   );

@@ -3,4 +3,5 @@ export interface Props {
     secondaryText: string;
     ctaText: string;
     cardType: string;
+    color: string;
 }
